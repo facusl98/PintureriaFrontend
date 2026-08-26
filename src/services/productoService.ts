@@ -1,0 +1,14 @@
+import type { Producto } from "../types/Producto";
+
+export async function obtenerProductos() : Promise<Producto[]> {
+
+  const response = await fetch(
+    "http://localhost:8080/productos"
+  );
+
+  if (!response.ok) {
+    throw new Error("Error al obtener productos");
+  }
+
+  return response.json();
+}
