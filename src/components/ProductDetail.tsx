@@ -11,6 +11,8 @@ function ProductDetail() {
   const [mostrarModal, setMostrarModal] = useState(false);
 
   useEffect(() => {
+  console.log("ID:", id);
+  console.log("API URL:", import.meta.env.VITE_API_URL);
     fetch(`${import.meta.env.VITE_API_URL}/productos/${id}`)
       .then((res) => res.json())
       .then((data) => {
