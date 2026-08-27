@@ -12,7 +12,7 @@ function Products() {
     const timer = setTimeout(() => {
       
       // Armamos la URL dinámica llamando a tu backend de Spring Boot
-      let url = `https://pintureriabackend.up.railway.app/productos`;
+      let url = `${import.meta.env.VITE_API_URL}/productos`;
       if (busqueda.trim() !== "") {
         url += `?nombre=${encodeURIComponent(busqueda)}`;
       }
