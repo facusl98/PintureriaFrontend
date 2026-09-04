@@ -7,6 +7,7 @@ import Productos from "../pages/Productos";
 import DetalleProducto from "../pages/DetalleProducto";
 import { CarritoProvider } from "../context/CarritoContext";
 import Carrito from "../pages/Carrito"
+import Login from "../components/Login";
 
 function AppRouter() {
   return (
@@ -24,6 +25,8 @@ function AppRouter() {
           <Route path="/productos/:id" element={<DetalleProducto />} />
 
           <Route path="/carrito" element={<Carrito />} />
+
+          <Route path="/auth" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </CarritoProvider>
